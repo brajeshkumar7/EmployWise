@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="item1">Help Center</div>
                 <div className="item2">Terms Of Service</div>
                 <div className="item3">Privacy Policy</div>
-                <div className="item4">@2025EmployWise</div>
+                <div className="item4">@EmployWise</div>
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../store/user-store";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import Card from "../components/Card";
 import EditUser from "../components/EditUser";
 import DeleteUser from "../components/DeleteUser";
@@ -33,7 +34,7 @@ const Users = () => {
 
             } catch (error) {
                 console.log("Error: ", error);
-                alert("Cannot Fetch Users!");
+                toast.error("Cannot Fetch Users!");
             }
         }
 
@@ -47,7 +48,7 @@ const Users = () => {
 
     return (
         <div className="container">
-            <div className="users-hero">
+            <div className="users-main">
                 <div className="search-container">
                     <h1>Users List</h1>
                     <hr />
@@ -90,9 +91,9 @@ const Users = () => {
             <div className="pagination">
                 <p>Pages: </p>
                 {
-                    Array.from({ length: totalPages }, (_, i) => (
-                        <button key={i + 1} onClick={() => setCurrentPage(i + 1)}>
-                            {i + 1}
+                    Array.from({ length: totalPages }, (_, n) => (
+                        <button key={n + 1} onClick={() => setCurrentPage(n + 1)}>
+                            {n + 1}
                         </button>
                     ))
                 }

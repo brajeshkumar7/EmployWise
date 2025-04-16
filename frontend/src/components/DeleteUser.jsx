@@ -4,6 +4,7 @@ import { UserContext } from "../store/user-store";
 import axios from 'axios';
 import "./EditUser.css";
 import "./DeleteUser.css";
+import { toast } from 'react-toastify';
 
 const DeleteUser = () => {
     const { users, setUsers, selectedUser, setShowDeleteForm } = useContext(UserContext);
@@ -18,13 +19,12 @@ const DeleteUser = () => {
             setUsers([...usersCopy]);
 
             await axios.delete("https://reqres.in/api/users/" + selectedUser.id);
-            console.log("Deleted Successfully!")
             setShowDeleteForm(false);
-            alert("Deleted Successfully!")
+            toast.success("Deleted Successfully!");
 
         } catch (error) {
             console.log("Error: ", error);
-            alert("Delete Failed!");
+            toast.error("Delete Failed!");
         }
     };
 

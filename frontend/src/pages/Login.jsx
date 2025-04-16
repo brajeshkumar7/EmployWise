@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import "./Login.css"
 import Footer from '../components/Footer'
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -17,7 +18,7 @@ const Login = () => {
         // Perform E-Mail Validation through Regular Expression or string matching
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            alert("Please enter a valid email address");
+            toast.error("Please enter a valid email address");
             return;
         }
 
@@ -32,18 +33,19 @@ const Login = () => {
             // Storing the token in session/local storage
             const token = response.data.token;
             sessionStorage.setItem("token", token);
+            toast.success("Login Successful!");
             navigate("/users")
 
         } catch (error) {
-            console.log("Error: ", error)
-            alert("Invalid credentials!")
+            console.log("Error: ", error);
+            toast.error("Invalid credentials!");
         }
     }
 
     return (
         <div className="container">
 
-            <div className="hero-container">
+            <div className="main-container">
                 <div className="login-container">
                     <div className="icon"><i className="bi bi-person-check user"></i></div>
 
@@ -72,7 +74,7 @@ const Login = () => {
                                 <button type="submit"><i className="bi bi-box-arrow-in-right login-arrow"></i>Login</button>
 
                             </form>
-                            <div className="terms">For continuing, agree to the <span>Terms of Use </span>
+                            <div className="privacy-policy">For continuing, agree to the <span>Terms of Use </span>
                                 and <span>Privacy Policy</span>.</div>
 
                         </div>

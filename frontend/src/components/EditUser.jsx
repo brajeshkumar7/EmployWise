@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useContext } from "react";
 import { UserContext } from "../store/user-store";
+import { toast } from 'react-toastify';
 import axios from "axios";
 import "./EditUser.css";
 
@@ -17,7 +18,7 @@ const EditUser = () => {
             event.preventDefault();
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert("Please enter a valid email address");
+                toast.error("Please enter a valid email address");
                 return;
             }
             const updatedUsers = users.map((user) => {
@@ -42,11 +43,10 @@ const EditUser = () => {
             const response = await axios.put("https://reqres.in/api/users/" + selectedUser.id, userInfo)
             console.log("Update Successful!")
             setShowEditForm(false);
-            alert("Update Successful!");
-            console.log(response.data);
+            toast.success("Update Successful!");
         } catch (error) {
-            console.log("Error: ", error)
-            alert("Update Failed!")
+            console.log("Error: ", error);
+            toast.error("Update Failed!");
         }
     }
 

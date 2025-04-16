@@ -4,7 +4,7 @@
     height: 100vh;
 }
 
-.hero-container {
+.main-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,17 +102,17 @@
     background-color: rgb(16 185 129);
 }
 
-.terms {
+.privacy-policy {
     font-size: 0.95rem;
     color: rgb(40, 39, 39);
 }
 
-.terms span {
+.privacy-policy span {
     text-decoration: underline;
     text-underline-offset: 0.1rem;
 }
 
-.terms span:hover {
+.privacy-policy span:hover {
     cursor: pointer;
 }
 

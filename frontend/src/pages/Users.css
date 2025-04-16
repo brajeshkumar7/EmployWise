@@ -4,7 +4,7 @@
     height: 100vh;
 }
 
-.users-hero {
+.users-main {
     flex-basis: 97vh;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,12 @@
     font-size: 3rem;
     font-weight: 600;
     margin: 0.5rem 2rem;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .search-container input {
@@ -51,6 +57,7 @@
 .users-box {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
