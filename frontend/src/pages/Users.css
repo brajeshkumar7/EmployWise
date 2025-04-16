@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.users-hero {
+    flex-basis: 97vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.search-container h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0.5rem 2rem;
+}
+
+.search-container input {
+    border: 0.095rem solid rgb(160, 156, 156);
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    margin: 0rem 2rem;
+    margin-right: 0.4rem;
+    padding: 1rem;
+}
+
+.search-container button {
+    border: none;
+    padding: 0.55rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 0.095rem solid rgb(160, 156, 156);
+    border-radius: 0.8rem;
+}
+
+.search-container button:hover {
+    cursor: pointer;
+    background-color: rgb(190, 190, 190);
+}
+
+.users-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.users-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.pagination button {
+    border: none;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    background-color: rgb(232, 232, 232);
+}
+
+.pagination button:hover {
+    cursor: pointer;
+    background-color: rgb(215, 215, 215);
+}
+
+@media (max-width: 492px) {
+    .search-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+    }
+
+    .search-container button {
+        display: none;
+    }
+
+}

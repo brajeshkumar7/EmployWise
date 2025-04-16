@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 97vh;
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(52 211 153);
+    border-radius: 50%;
+}
+
+.user {
+    height: 1em;
+    width: 1em;
+    font-size: 30px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 40%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.095rem solid #030303;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+}
+
+.login-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login form {
+    width: 100%;
+    color: rgb(40, 39, 39);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.login-header {
+    font-weight: 500;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.login label {
+    margin-bottom: 0.2rem;
+}
+
+.login input {
+    border: 0.095rem solid rgb(160, 156, 156);
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.login-arrow {
+    margin-right: 7px;
+}
+
+.login button {
+    border: none;
+    padding: 0.7rem 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background-color: rgb(52 211 153);
+    color: white;
+    border-radius: 2rem;
+}
+
+.login button:hover {
+    cursor: pointer;
+    background-color: rgb(16 185 129);
+}
+
+.terms {
+    font-size: 0.95rem;
+    color: rgb(40, 39, 39);
+}
+
+.terms span {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+}
+
+.terms span:hover {
+    cursor: pointer;
+}
+
+.login-container .line {
+    border: 0.1rem solid rgb(160, 156, 156);
+    border-radius: .1rem;
+    width: 50%;
+}
+
+@media (max-width: 475px) {
+    .login {
+        font-size: 0.95rem;
+    }
+
+    .login-header {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "intrnship-assign",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "keywords": [],
+  "author": "Brajesh Kumar",
+  "license": "MIT",
+  "description": "This is a simple EmployWise react app"
+}

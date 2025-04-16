@@ -1,0 +1,108 @@
+.avatar-image {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 7.5rem;
+    width: 7.5rem;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19rem;
+    height: 9rem;
+    background-color: rgb(234, 234, 234);
+    gap: 1rem;
+    border: 0.095rem solid rgb(160, 156, 156);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.first-name {
+    margin-bottom: 0.3rem;
+}
+
+.first-name span {
+    font-weight: 500;
+}
+
+.last-name span {
+    font-weight: 500;
+}
+
+.buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.delete-button {
+    border: none;
+    padding: 0.4rem 0.7rem;
+    font-size: 1rem;
+    background-color: rgb(243, 83, 83);
+    color: white;
+    border-radius: 0.7rem;
+}
+
+
+.edit-button {
+    border: none;
+    padding: 0.4rem 0.7rem;
+    font-size: 1rem;
+    background-color: rgb(0, 138, 184);
+    color: white;
+    border-radius: 0.7rem;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background-color: rgb(223, 5, 5);
+}
+
+.edit-button:hover {
+    cursor: pointer;
+    background-color: rgb(2, 115, 153);
+}
+
+@media (max-width: 387px) {
+    .avatar-img {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .info {
+        font-size: 0.9rem;
+    }
+
+    .delete-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+        background-color: rgb(243, 83, 83);
+        color: white;
+        border-radius: 0.7rem;
+    }
+
+    .edit-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+        background-color: rgb(0, 138, 184);
+        color: white;
+        border-radius: 0.7rem;
+    }
+
+    .card-container {
+        padding: 0.5rem;
+    }
+}

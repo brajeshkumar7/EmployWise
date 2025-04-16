@@ -1,0 +1,98 @@
+.popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(.2rem);
+}
+
+.popup-box {
+    width: 36vw;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.095rem solid #030303;
+    border-radius: 1rem;
+    padding: 2rem 1.7rem;
+    padding-bottom: 0.3rem;
+}
+
+.popup-box h1 {
+    margin-bottom: 1.2rem;
+}
+
+.popup-box form {
+    width: 100%;
+    color: rgb(40, 39, 39);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.popup-box input {
+    background-color: rgb(252, 249, 249);
+    border: 0.095rem solid rgb(160, 156, 156);
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.popup-box label {
+    margin-bottom: 0.2rem;
+}
+
+.edit-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.edit-button-save {
+    color: white;
+    background-color: rgb(125, 200, 84);
+}
+
+.edit-button-save:hover {
+    cursor: pointer;
+    background-color: rgb(0, 200, 0);
+}
+
+.edit-button-close {
+    background-color: rgb(243, 83, 83);
+    color: white;
+}
+
+.edit-button-close:hover {
+    cursor: pointer;
+    background-color: rgb(223, 5, 5);
+}
+
+@media (max-width: 757px) {
+    .popup-box {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 511px) {
+    .popup-box {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 387px) {
+    .popup-box {
+        width: 90vw;
+    }
+}
